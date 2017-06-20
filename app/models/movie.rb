@@ -3,5 +3,5 @@ class Movie < ApplicationRecord
   belongs_to :user
   has_many :reviews
   has_many :movie_relationships
-  has_many :commentators, through: :movie_relationships, source: :user
+  has_many :collectors, through: :movie_relationships, source: :user
 end

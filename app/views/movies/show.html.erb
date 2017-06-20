@@ -2,10 +2,10 @@
   <div class="group">
 
     <span class="pull-right">
-      <% if current_user && current_user.is_commentator_of?(@movie) %>
-        <label class="label laber-success"> 群组成员 </label>
+      <% if current_user && current_user.is_collector_of?(@movie) %>
+        <label class="label laber-success"> 已收藏该电影 </label>
       <% else %>
-        <label class="label label-warning"> 不是群组成员 </label>
+        <label class="label label-warning"> 未收藏该电影 </label>
       <% end %>
     </span>
 
