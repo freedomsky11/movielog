@@ -11,4 +11,12 @@ class User < ApplicationRecord
   def is_collector_of?(movie)
     collect_movies.include?(movie)
   end
+
+  def collect!(movie)
+    collect_movies << movie
+  end
+
+  def cancel!(movie)
+    collect_movies.delete(movie)
+  end
 end
