@@ -3,9 +3,11 @@
 
     <span class="pull-right">
       <% if current_user && current_user.is_collector_of?(@movie) %>
-        <label class="label laber-success"> 已收藏该电影 </label>
+        <label class="label label-success"> 已收藏该电影 </label>
+        <%= link_to("Cancel Favorite", cancel_movie_path(@movie), method: :post, class: "btn btn-default") %>
       <% else %>
         <label class="label label-warning"> 未收藏该电影 </label>
+        <%= link_to("Favorite", collect_movie_path(@movie), method: :post, class: "btn btn-default") %>
       <% end %>
     </span>
 
